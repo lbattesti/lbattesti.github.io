@@ -281,7 +281,7 @@ body:not(.user-is-tabbing) a:focus {
     top: 0;
     left: 0;
     right: 100%;
-    background: var(--white);
+    background: transparent;
     height: 100%;
     z-index: -1;
     transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
@@ -294,7 +294,7 @@ body:not(.user-is-tabbing) a:focus {
 .link__text:hover::after,
 .link__text:focus:after {
     right: 0;
-    background: var(--white);
+    transform: scale(1.5);
 }
 
 .link__text span {
@@ -525,6 +525,49 @@ div.edu__text p,h3 {
     margin: 0;
     padding: 0;
 }
+
+/* --------------------------------------- */
+/* ----- Research & Personal Projects ----- */
+/* --------------------------------------- */
+
+.rsch__box {
+    display: flex;
+    flex-direction: center;
+}
+
+@media(max-width: 900px) {
+    .rsch__box {
+        align-items: flex;
+        flex-direction: column;
+    }
+}
+
+.rsch__box:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+@media(max-width: 900px) {
+    .rsch__box:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+@media(min-width: 901px) {
+    .rsch__box {
+        margin-bottom: 10px;
+    }
+
+    .rsch__text {
+        margin-bottom: 0;
+        margin-left: 20px;
+    }
+}
+
+div.rsch__text p,h3 {
+    margin: 0;
+    padding: 0;
+}
+
 
 
 /* --------------------------------------- */
